@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu Al</title>
+    <link rel="stylesheet" href="../css/appointments.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Appointment System</h1>
+        <div class="header-right">
+            <span class="isim">Ahmet Can Çağlar</span>
+            <div class="profile-icon"></div>
+        </div>
+    </header>
+    <nav>
+        <a href="home.html">Home</a> 
+        <a href="appointment.html" class="randevu-al">Make an Appointment</a> 
+        <a href="myappointment.html">My Appointments</a> 
+        <a href="polyclinics.html">Polyclinics</a> 
+        <a href="aboutus.html">About Us</a> 
+        <a href="contact.html">Contact</a> 
+    </nav>
+    <main>
+        <div class="appointment-form">
+            <h2>Make an Appointment</h2>
+            <form id="randevuForm">
+                <label for="tarihSecici">Date:</label>
+                <input type="date" id="tarihSecici" name="tarihSecici" required><br><br>
+
+                <label for="bolum">Department:</label>
+                <select id="bolum" name="bolum" required>
+                    <option value="">Select</option>
+                    <option value="anestezi">Anesthesia and Reanimation</option>
+                    <option value="beyin_sinir">Neurosurgery</option>
+                    <option value="cocuk">Pediatric Surgery</option>
+                    <option value="genel">General Surgery</option>
+                    <option value="gogus">Thoracic Surgery</option>
+                    <option value="goz">Ophthalmology</option>
+                    <option value="kadin_dogum">Obstetrics and Gynecology</option>
+                    <option value="kalp_damar">Cardiovascular Surgery</option>
+                    <option value="kulak_burun_bogaz">Ear, Nose, and Throat</option>
+                    <option value="obezite">Obesity and Obesity Surgery</option>
+                    <option value="organ_nakli">Organ Transplantation</option>
+                    <option value="ortopedi">Orthopedics and Traumatology</option>
+                </select><br><br>
+
+                <label for="doktor">Doctor:</label>
+                <select id="doktor" name="doktor" required disabled>
+                    <option value="">Select a department first</option>
+                </select><br><br>
+
+                <div id="saatler" style="display: none;">
+                    <h3>Available Times:</h3>
+                    <div id="saatButonlari"></div>
+                </div>
+
+                <input type="hidden" id="secilenSaat" name="secilenSaat">
+                <button type="submit" id="submitButton" disabled>Confirm Appointment</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Life Hospital. All rights reserved.</p> 
+    </footer>
+    <script src="../javascript/appointment.js"></script>
+</body>
+</html>
